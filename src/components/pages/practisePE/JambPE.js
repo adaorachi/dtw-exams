@@ -82,13 +82,10 @@ class JambPE extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  console.log(state, 'state');
-  return {
-    auth: state.firebase.auth,
-    subjectInfo: state.subjects,
-  };
-};
+const mapStateToProps = state => ({
+  auth: state.firebase.auth,
+  subjectInfo: state.subjects,
+});
 
 const mapDispatchToProps = dispatch => ({
   submitSubjects: (subjects, path) => dispatch(examSubjects(subjects, path)),
