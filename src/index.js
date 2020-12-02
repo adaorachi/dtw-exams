@@ -1,15 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { reduxFirestore, getFirestore } from 'redux-firestore';
+import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
+import rootReducer from './store/reducers/rootReducer';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
+import firebase from './config/fbConfig';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const store = createStore(rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({
+      getFirestore,
+      getFirebase,
+    })),
+    reduxFirestore(firebase),
+    reactReduxFirebase(firebase, {
+      useFirestoreForProfile: true,
+      userProfile: 'users',
+      attachAuthIsReady: true,
+    }),
+  ));
+
+store.firebaseAuthIsReady.then(() => {
+  ReactDOM.render(
+    <Provider store={store}><App /></Provider>,
+    document.getElementById('root'),
+  );
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
