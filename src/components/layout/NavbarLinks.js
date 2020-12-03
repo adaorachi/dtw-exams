@@ -15,8 +15,8 @@ const NavbarLinks = props => {
     dropdownListURL: ['jamb', 'wassce', 'neco'],
   };
   const userList = {
-    dropdownList: ['Edit Profile', 'Account', 'Logout'],
-    dropdownListURL: ['edit-profile', 'account', 'logout'],
+    dropdownList: ['Profile', 'Account', 'Logout'],
+    dropdownListURL: ['profile', 'account', 'logout'],
   };
 
   const handleLogout = e => {

@@ -63,7 +63,7 @@ export default function NavigationButtons(props) {
   return (
     <div className="navigation-buttons my-3">
       <div className="row">
-        <div className="col-3">
+        <div className="col-button mx-2">
           <span className="previous">
             <a key={ind} href="#" className="form-button d-inline-block" id="prev" onClick={e => handleNavClick(e, item.subject, item.questions.length)}>
               <i className="ri-arrow-left-line nav-icon" />
@@ -72,7 +72,7 @@ export default function NavigationButtons(props) {
             </a>
           </span>
         </div>
-        <div className="col-3">
+        <div className="col-button mx-2">
           <span className="next">
             <a key={ind} href="#" className="form-button d-inline-block" id="next" onClick={e => handleNavClick(e, item.subject, item.questions.length)}>
               Next
@@ -83,14 +83,14 @@ export default function NavigationButtons(props) {
       </div>
       {(!examReview) ? (
         <div className="row mt-4 lower-row">
-          <div className="col-3">
+          <div className="col-button mx-2">
             <span className="submit">
               <a href="#" onClick={e => handleClearExam(e)} className="form-button d-inline-block">
                 Quit Exam
               </a>
             </span>
           </div>
-          <div className="col-3">
+          <div className="col-button mx-2">
             <span className="submit">
               <a href="#" onClick={e => handleExamSubmit(e)} className="form-button d-inline-block">
                 Submit Exam
@@ -100,9 +100,9 @@ export default function NavigationButtons(props) {
         </div>
       ) : (
         <div className="row mt-4 lower-row">
-          <div className="col-3">
+          <div className="col-button mx-2">
             <span className="submit">
-              <a href="#" onClick={e => handleClearExam(e)} className="form-button d-inline-block">
+              <a href="#" onClick={e => handleClearExam(e)} className="form-button max-width d-inline-block">
                 Start another Exam
               </a>
             </span>

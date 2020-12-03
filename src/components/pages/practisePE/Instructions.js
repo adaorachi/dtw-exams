@@ -115,40 +115,40 @@ class Instructions extends Component {
               <div className="mb-4">
                 <h4>Please Read All</h4>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   You will be given 20 questions in English Language and 10 questions on each of the other subjects (a total of 50 questions). The questions will be presented 1 each in series starting with English Language.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   You will be given 35 mins to answer all 50 questions and submit.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   If you do not have an instant idea of a question you can skip it by clicking on the next button, you can re-attempt the skipped question when you have attempted others.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   The attempted questions will have their button colored below the page.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   Upon answering your questions, you can click on each question button below to re-visit the question.
                   {' '}
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   Clicking on the submit button will give you the opportunity to submit your test.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   In the event of exhausting your maximum allowed time , the system will end the test and automatically submit it for grading.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   Your ranking will be based on a cumulative of all your scores this week and the number of free exams written. The time taken to finish each exam will also be taken into consideration. So you have to keep trying new exams for FRESH SET OF QUESTIONS to gain more points and rise in ranking. Keep trying everytime, everyday and your coming exam will be a walk-over for you.
                 </p>
                 <p>
-                  <i className="ri-check-double-line icon-green" />
+                  <i className="ri-checkbox-circle-line icon-green" />
                   To start now, click on the &quot;Start Exam&quot; button below.
                 </p>
               </div>

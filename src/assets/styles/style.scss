@@ -27,7 +27,7 @@ h6 {
 }
 
 .app-container {
-  margin-top: 42px;
+  margin-top: 60px;
 }
 
 /*--------------------------------------------------------------
@@ -62,7 +62,7 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+#loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@ h6 {
   background: #fff;
 }
 
-#preloader:before {
+#loader:before {
   content: "";
   position: fixed;
   top: calc(50% - 30px);
@@ -626,9 +626,11 @@ section {
 }
 
 .breadcrumbs {
-  margin-top: 73px;
   text-align: center;
   background: #43a047;
+  background: linear-gradient(to right, #43a048ef, #255828ef), url("../img/hero-bg.jpg") no-repeat top center;
+  background-size: cover;
+  position: relative;
   padding: 30px 0;
   color: #fff;
 }
@@ -645,37 +647,60 @@ section {
 }
 
 .breadcrumbs p {
-  font-size: 14px;
+  // font-size: 14px;
   margin-bottom: 0;
 }
 
 .form-button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  max-width: 250px;
-  outline: 0;
-  background: #4caf50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
+  // font-family: "Roboto", sans-serif;
+  // text-transform: uppercase;
+  // max-width: 250px;
+  // outline: 0;
+  // background: #4caf50;
+  // width: 100%;
+  // border: 0;
+  // padding: 15px;
+  // color: #ffffff;
+  // font-size: 14px;
+
+  background: #43a047;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px 9px 25px;
   transition: all 0.3 ease;
-  cursor: pointer;
+  display: inline-block;
+  width: max-content;
   border: none;
   outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    background: #3d9241;
+  }
 
   &.tab-button {
     background: transparent;
     border: 1px solid #aaa;
+    border-radius: 0;
     color: #aaa;
     width: 1rem;
     height: 1rem;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: none;
+
+    &.shadow-tab {
+      box-shadow: 1px 1px 2px 0px #dbd9d9;
+      transform: scale(1.1);
+      border: 1px solid #4caf50;
+    }
 
     &:hover {
       background: transparent;
@@ -688,12 +713,6 @@ section {
   }
 }
 
-.form-button:hover {
-  // background: #3d9241;
-  border: #3d9241;
-  outline: #3d9241;
-}
-
 .auth-page {
   .form-button {
     width: 100%;
@@ -703,13 +722,18 @@ section {
 
 .navigation-buttons {
   .form-button {
-    padding: 10px;
+    // padding: 10px;
     text-align: center;
   }
 }
 
 .notification-container {
   width: max-content;
+
+  .close-button {
+    outline: none;
+    border: none;
+  }
 }
 
 #form-loader {
@@ -769,14 +793,18 @@ section {
     border: 1px solid #46a048;
     padding: 0.5rem;
     margin-bottom: 0.8rem;
+
     .form-button[data-style="wrong"] {
-      background-color: #c71c1c;
-      color: #fff;
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
     }
 
-    .form-button[data-style="right"] {
-      background-color: #3d9241;
-      color: #fff;
+    .form-button[data-style="right"],
+    .form-button.attempted {
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
     }
   }
 
@@ -803,7 +831,7 @@ section {
   .timer {
     font-size: 1.5rem;
   }
-  
+
   .review-icon-wrong,
   .review-icon-correct {
     font-size: 1.5rem;
@@ -815,6 +843,31 @@ section {
 
   .review-icon-wrong {
     color: #de2222;
+  }
+}
+
+/*--------------------------------------------------------------
+# Profile Page
+--------------------------------------------------------------*/
+.profile-page {
+  .profile-card {
+    width: 300px;
+
+    img {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  .score-features {
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    h6 {
+      color: #4aa746;
+    }
   }
 }
 

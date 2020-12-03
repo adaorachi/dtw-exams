@@ -81,6 +81,8 @@ const examReducer = (state = initState, action) => {
         error: null,
         examMode: false,
         examScore: action.data,
+        questionData: action.data.questionData,
+        submittedAnswers: action.data.submittedAnswers,
       };
     case 'GET_NO_EXAM_SCORE_SUCCESS':
       console.log('no exam score retrieved');

@@ -5,8 +5,12 @@ import QuestionContainer from '../../snippets/cbt/QuestionContainer';
 class ViewExplanation extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
+  }
+
+  componentDidMount() {
+    const { getExamSubjects } = this.props;
+    getExamSubjects();
   }
 
   render() {

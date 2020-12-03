@@ -25,6 +25,13 @@ class SignIn extends Component {
     }
   }
 
+  outputMessage = message => `<div class="alert alert-danger alert-dismissible fade show mb-0" id="alert-box" role="alert">
+  ${message}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>`
+
   handleSubmit = e => {
     e.preventDefault();
     const { signIn } = this.props;
@@ -44,13 +51,6 @@ class SignIn extends Component {
     });
   }
 
-  outputMessage = message => `<div class="alert alert-danger alert-dismissible fade show mb-0" id="alert-box" role="alert">
-    ${message}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>`
-
   render() {
     const { auth } = this.props;
 
@@ -67,10 +67,11 @@ class SignIn extends Component {
             <form className="login-form" onSubmit={this.handleSubmit}>
               <input id="email" type="email" placeholder="Email" onChange={this.handleChange} />
               <input id="password" type="password" placeholder="Password" onChange={this.handleChange} />
-              <button className="form-button" type="submit">login</button>
+              <button className="form-button" type="submit">Login</button>
               <p className="message"><Link to="/register">Forgot your password?</Link></p>
               <p className="message">
                 Not registered?
+                {' '}
                 <Link to="/register">Create an account</Link>
               </p>
             </form>

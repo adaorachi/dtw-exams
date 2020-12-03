@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable max-len */
@@ -54,7 +53,7 @@ class JambPE extends Component {
 
   render() {
     const {
-      subjectInfo, auth, submitSubjects, clearExamSubjects, updateExamPath, submitExam, getExamScores,
+      subjectInfo, auth, submitSubjects, clearExamSubjects, updateExamPath, submitExam, getExamScores, getExamSubjects,
     } = this.props;
 
     const {
@@ -73,7 +72,7 @@ class JambPE extends Component {
           ) : (examPath === 'conclude-exam') ? (
             <ExamSummary clearExam={clearExamSubjects} getExamScores={getExamScores} examScore={examScore} updatePath={updateExamPath} />
           ) : (examPath === 'view-explanation') ? (
-            <ViewExplanation clearExam={clearExamSubjects} getExamScores={getExamScores} subjectInfo={subjectInfo} examReview />
+            <ViewExplanation clearExam={clearExamSubjects} getExamSubjects={getExamSubjects} subjectInfo={subjectInfo} examReview />
           ) : (
             <Redirect to="/" />
           )}
@@ -81,6 +80,8 @@ class JambPE extends Component {
     );
   }
 }
+
+// console.log(state, 'state');
 
 const mapStateToProps = state => ({
   auth: state.firebase.auth,

@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import Loader from '../../pages/Loader';
 import SubjectTabs from './SubjectTabs';
 import ExamInfo from './ExamInfo';
 import NavigationButtons from './NavigationButtons';
@@ -93,8 +94,7 @@ const QuestionContainer = props => {
     allTabs.forEach(tab => {
       const dataId = tab.getAttribute('data-key');
       if (aa[dataId] !== '') {
-        tab.style.backgroundColor = '#4caf50';
-        tab.style.color = '#fff';
+        tab.classList.add('attempted');
       }
     });
   };
@@ -122,7 +122,7 @@ const QuestionContainer = props => {
     });
     examInfo = (!examReview) ? (<ExamInfo submitExam={submitExam} clearExam={clearExam} />) : '';
   } else {
-    return (<div id="preloader" />);
+    return <Loader />;
   }
 
   return (

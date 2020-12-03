@@ -83,6 +83,7 @@ class SignUp extends Component {
               <button className="form-button" type="submit">Register</button>
               <p className="message">
                 Already registered?
+                {' '}
                 <Link to="/login">Sign In</Link>
               </p>
             </form>

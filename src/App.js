@@ -7,13 +7,14 @@ import SignUp from './components/auth/SignUp';
 import SignIn from './components/auth/SignIn';
 // import StudyPQ from './components/singleComponent/studyPQ';
 import JambPE from './components/pages/practisePE/JambPE';
+import Profile from './components/pages/user/Profile';
 import ScrollTop from './ScrollTop';
 import './assets/styles/style.scss';
 
 function App() {
-  setTimeout(() => {
-    document.getElementById('preloader').style.display = 'none';
-  }, 1000);
+  // setTimeout(() => {
+  //   document.getElementById('preloader').style.display = 'none';
+  // }, 1000);
   return (
     <BrowserRouter>
       <ScrollTop>
@@ -24,15 +25,15 @@ function App() {
               <Route exact path="/register" component={SignUp} />
               <Route exact path="/login" component={SignIn} />
               <Route exact path="/" component={Home} />
-              {/* <Route exact path="/practise-exam/jamb" component={JambPE} /> */}
               <Route exact path="/practise-exam/:subSlug" component={JambPE} />
+              <Route exact path="/profile" component={Profile} />
               {/* <Route exact path="/past-questions/:subSlug" component={StudyPQ} />
              */}
             </Switch>
           </div>
           <Footer />
           {/* <a href="#" className="back-to-top"><i className="bx bx-up-arrow-alt"></i></a> */}
-          <div id="preloader" />
+          {/* <div id="preloader" /> */}
         </div>
       </ScrollTop>
     </BrowserRouter>

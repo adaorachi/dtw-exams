@@ -61,7 +61,8 @@ class ChooseSubjects extends Component {
         }, 2000);
       }
     }
-    const notificationCont = document.querySelector('.select-subject-error-container');
+
+    const notificationCont = document.getElementById('select-subject-error');
     notificationCont.style.display = 'block';
     return false;
   }
@@ -85,10 +86,9 @@ class ChooseSubjects extends Component {
     };
 
     return (
-      <div className={`${params.id}PE-page`}>
+      <div className={`${params.subSlug}PE-page`}>
         <div className="notification-container redirect-error-container" id="redirect-error" />
         <div className="breadcrumbs">
-
           <div className="container">
             <h2>
               {(params.subSlug === 'jamb') ? 'Practice Exam For Joint Admissions and Matriculation Board (JAMB)' : (params.subSlug === 'waec') ? 'Practice Exam For West African Senior School Certificate Examination (WASSCE)' : ''}
