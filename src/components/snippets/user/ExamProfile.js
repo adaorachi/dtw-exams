@@ -18,36 +18,38 @@ export default function ExamProfile(props) {
       const jambScore = Math.floor((getScore(examScore) / getScore(examLength)) * 400);
 
       return (
-        <div key={startTime} className="card-body p-3 w-100">
-          <div className="date-exam">
-            <h6 className="m-0">You completed an exam on</h6>
-            <small>{moment(examDate).format('dddd, MMMM Do, YYYY h:mm:ss A')}</small>
-          </div>
-          <div className="d-flex justify-content-between mt-2">
-            <div className="subject">
-              <h6 className="m-0">Subjects</h6>
-              <p>{subject}</p>
+        <div key={startTime} className="card icon-box p-0 mb-3 align-items-start">
+          <div className="card-body p-3 w-100">
+            <div className="date-exam">
+              <h6 className="m-0">You completed an exam on</h6>
+              <small>{moment(examDate).format('dddd, MMMM Do, YYYY h:mm:ss A')}</small>
             </div>
-            <div className="time">
-              <h6 className="m-0">Time Advantage</h6>
-              <p>
-                {timeDiff(timeLeft, '', false)}
-                {' '}
-                remaining
-              </p>
+            <div className="d-flex justify-content-between mt-2">
+              <div className="subject">
+                <h6 className="m-0">Subjects</h6>
+                <p>{subject}</p>
+              </div>
+              <div className="time">
+                <h6 className="m-0">Time Advantage</h6>
+                <p>
+                  {timeDiff(timeLeft, '', false)}
+                  {' '}
+                  remaining
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="scores d-flex mt-2">
-            <div className="mr-2">
-              <h6>Percentage Score</h6>
-              <h4 className="p-0">
-                {percentScore}
-                %
-              </h4>
-            </div>
-            <div>
-              <h6>JAMB Score</h6>
-              <h4 className="p-0">{jambScore}</h4>
+            <div className="scores d-flex mt-2">
+              <div className="mr-2">
+                <h6>Percentage Score</h6>
+                <h4 className="p-0">
+                  {percentScore}
+                  %
+                </h4>
+              </div>
+              <div>
+                <h6>JAMB Score</h6>
+                <h4 className="p-0">{jambScore}</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +60,7 @@ export default function ExamProfile(props) {
   }
 
   return (
-    <div className="card icon-box p-0 mb-3 align-items-start">
+    <div className="card-container score-features features">
       {totalScore}
     </div>
   );

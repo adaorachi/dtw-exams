@@ -47,9 +47,7 @@ class Profile extends Component {
               </div>
             </div>
             <div className="col-12 col-sm-9">
-              <div className="card-container score-features features">
-                <ExamProfile examScore={examScore} />
-              </div>
+              <ExamProfile examScore={examScore} />
             </div>
           </div>
         </div>
