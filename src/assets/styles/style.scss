@@ -347,6 +347,10 @@ h6 {
   right: 15px;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 1366px) {
   .nav-menu .drop-down .drop-down ul {
     left: -90%;
@@ -356,6 +360,39 @@ h6 {
   }
   .nav-menu .drop-down .drop-down > a:after {
     content: "\ea9d";
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    // display: none;
+    position: absolute;
+    right: -9999px;
+
+    &.open {
+      // display: block;
+      position: absolute;
+      top: 60px;
+      background: #fff;
+      right: 0;
+      width: 250px;
+      height: 100vh;
+      transition: right 250ms;
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mobile-nav-toggle {
+    display: block;
   }
 }
 
@@ -392,7 +429,7 @@ h6 {
   z-index: 9998;
   border: 0;
   background: none;
-  font-size: 24px;
+  font-size: 2rem;
   transition: all 0.4s;
   outline: none !important;
   line-height: 1;
@@ -401,7 +438,7 @@ h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #37423b;
+  color: #43a047;
 }
 
 .mobile-nav {
@@ -728,7 +765,7 @@ section {
 }
 
 .notification-container {
-  width: max-content;
+  max-width: 500px;
 
   .close-button {
     outline: none;
@@ -851,7 +888,7 @@ section {
 --------------------------------------------------------------*/
 .profile-page {
   .profile-card {
-    width: 300px;
+    // width: 300px;
 
     img {
       width: 100%;

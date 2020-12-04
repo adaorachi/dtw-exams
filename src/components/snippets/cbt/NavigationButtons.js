@@ -83,14 +83,14 @@ export default function NavigationButtons(props) {
       </div>
       {(!examReview) ? (
         <div className="row mt-4 lower-row">
-          <div className="col-button mx-2">
+          <div className="col-button m-2">
             <span className="submit">
               <a href="#" onClick={e => handleClearExam(e)} className="form-button d-inline-block">
                 Quit Exam
               </a>
             </span>
           </div>
-          <div className="col-button mx-2">
+          <div className="col-button m-2">
             <span className="submit">
               <a href="#" onClick={e => handleExamSubmit(e)} className="form-button d-inline-block">
                 Submit Exam
@@ -100,7 +100,7 @@ export default function NavigationButtons(props) {
         </div>
       ) : (
         <div className="row mt-4 lower-row">
-          <div className="col-button mx-2">
+          <div className="col-button m-2">
             <span className="submit">
               <a href="#" onClick={e => handleClearExam(e)} className="form-button max-width d-inline-block">
                 Start another Exam

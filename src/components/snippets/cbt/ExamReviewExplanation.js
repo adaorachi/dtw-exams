@@ -10,8 +10,8 @@ export default function ExamReviewExplanation() {
         </div>
       </div>
       <div className="post-button">
-        <a href="/" className="form-button mr-3">Post an Explanation</a>
-        <a href="/" className="form-button">Suggestion Correction</a>
+        <a href="/" className="form-button my-2 mr-0 mr-sm-3">Post an Explanation</a>
+        <a href="/" className="form-button my-2">Suggestion Correction</a>
       </div>
     </div>
   );

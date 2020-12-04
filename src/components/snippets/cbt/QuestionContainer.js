@@ -128,7 +128,7 @@ const QuestionContainer = props => {
   return (
     <div className="container-fluid my-4">
       <div className="row px-4">
-        <div className="col-lg-8">
+        <div className="col-lg-8 order-2 order-md-1 p-0 p-md-2">
           <div className="card border-card">
             <nav>
               <SubjectTabs data={data} />
@@ -143,7 +143,7 @@ const QuestionContainer = props => {
           ) : ('')}
 
         </div>
-        <div className="col-lg-4">
+        <div className="col-lg-4 order-1 order-md-2 p-0 p-md-2">
           {examInfo}
         </div>
       </div>

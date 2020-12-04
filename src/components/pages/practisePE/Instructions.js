@@ -152,14 +152,16 @@ class Instructions extends Component {
                   To start now, click on the &quot;Start Exam&quot; button below.
                 </p>
               </div>
-              <div className="mt-3 d-inline ml-2">
-                <Link to="#" onClick={e => this.handleUpdateExamPath(e)} className="form-button">Start Exam</Link>
-              </div>
-              <div className="mt-3 d-inline ml-2">
-                <Link to="#" onClick={e => this.handleClearExamMode(e, '')} className="form-button">Change Subjects</Link>
-              </div>
-              <div className="mt-3 d-inline ml-2">
-                <Link to="#" onClick={e => this.handleClearExamMode(e, history.push('/'))} className="form-button">Quit Exam</Link>
+              <div className="text-center text-md-left">
+                <div className="mt-3 d-block d-md-inline ml-2">
+                  <Link to="#" onClick={e => this.handleUpdateExamPath(e)} className="form-button">Start Exam</Link>
+                </div>
+                <div className="mt-3 d-block d-md-inline ml-2">
+                  <Link to="#" onClick={e => this.handleClearExamMode(e, '')} className="form-button">Change Subjects</Link>
+                </div>
+                <div className="mt-3 d-block d-md-inline ml-2">
+                  <Link to="#" onClick={e => this.handleClearExamMode(e, history.push('/'))} className="form-button">Quit Exam</Link>
+                </div>
               </div>
             </div>
           </div>

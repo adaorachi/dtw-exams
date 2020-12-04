@@ -38,7 +38,7 @@ export default function ExamOverview(props) {
   return (
     <>
       <h5>Exam Overview</h5>
-      <table className="table table-sm table-striped">
+      <table className="table table-sm table-striped table-responsive">
         <thead>
           <tr>
             <th scope="col">Subjects</th>

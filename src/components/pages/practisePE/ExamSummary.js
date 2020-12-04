@@ -48,26 +48,26 @@ class ExamSummary extends Component {
         </div>
 
         <div className="container">
-          <div className="row">
-            <div className="card p-3 my-3 col-9 border-card">
+          <div className="row m-0">
+            <div className="card p-3 my-3 col-12 col-md-9 border-card">
               <div className="row">
                 <ExamScores examScore={examScore} />
-                <div className="col-lg-5">
+                <div className="col-lg-5 mt-3 mt-md-0">
                   <TimeAnalysis examScore={examScore} />
                 </div>
               </div>
               <hr />
-              <div className="row p-4">
+              <div className="row">
                 <div className="col-12">
                   <ExamOverview examScore={examScore} />
                 </div>
               </div>
               <hr />
-              <div className="d-flex justify-content-between">
-                <Link className="form-button max-width" to="#" onClick={e => this.handleUpdatepath(e)}>
+              <div className="d-flex justify-content-between flex-column flex-md-row">
+                <Link className="form-button max-width my-2 my-md-0" to="#" onClick={e => this.handleUpdatepath(e)}>
                   View Correct Answers
                 </Link>
-                <Link className="form-button max-width" to="#" onClick={e => this.handleClearExam(e)}>
+                <Link className="form-button max-width my-2 my-md-0" to="#" onClick={e => this.handleClearExam(e)}>
                   Start Another Exam
                 </Link>
               </div>

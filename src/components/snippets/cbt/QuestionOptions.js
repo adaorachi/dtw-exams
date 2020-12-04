@@ -16,7 +16,7 @@ export default function QuestionOptions(props) {
     <div className="options py-4">
       <form id={`form-${id}`} className="form-options">
         {Object.entries(sortObject(option)).map(entry => (
-          <div className="option d-flex align-items-center mb-3" key={entry[0]}>
+          <div className="option d-flex align-items-start mb-3" key={entry[0]}>
             <span className="mr-4">
               (
               {entry[0].toUpperCase()}

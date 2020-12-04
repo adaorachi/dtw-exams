@@ -19,7 +19,7 @@ class ExamInfo extends Component {
   render() {
     const { startTime } = this.state;
     return (
-      <div className="p-3 my-3 features">
+      <div className="p-0 p-md-3 my-3 features">
         <div className="card-body">
           <div className="card-tabs mb-4">
             <div className="row">

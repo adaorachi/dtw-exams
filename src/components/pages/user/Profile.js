@@ -23,10 +23,10 @@ class Profile extends Component {
 
     return (
       <div className="profile-page">
-        <div className="container py-4">
+        <div className="container-fluid py-4">
           <div className="row">
-            <div className="col-4">
-              <div className="card profile-card text-white mb-3">
+            <div className="col-12 col-sm-3">
+              <div className="card profile-card m-auto text-white mb-3">
                 <h5 className="card-header bg-success">
                   {(profile.firstName) ? (
                     <>
@@ -46,7 +46,7 @@ class Profile extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-8">
+            <div className="col-12 col-sm-9">
               <div className="card-container score-features features">
                 <ExamProfile examScore={examScore} />
               </div>
